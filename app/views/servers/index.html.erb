@@ -1,0 +1,34 @@
+<h1>Listing servers</h1>
+
+<table>
+  <tr>
+    <th>Alias</th>
+    <th>Public name</th>
+    <th>Private name</th>
+    <th>Public ip</th>
+    <th>Private ip</th>
+    <th>Type</th>
+    <th>Status</th>
+    <th>Image</th>
+  </tr>
+
+<% for server in @servers %>
+  <tr>
+    <td><%=h server.alias %></td>
+    <td><%=h server.public_name %></td>
+    <td><%=h server.private_name %></td>
+    <td><%=h server.public_ip %></td>
+    <td><%=h server.private_ip %></td>
+    <td><%=h server.type %></td>
+    <td><%=h server.status %></td>
+    <td><%=h server.image %></td>
+    <td><%= link_to 'Show', :controller=>"servers", :action=>"show", :id=>"#{server.alias}" %></td>
+    <td><%= link_to 'Edit', :controller=>"servers", :action=>"edit", :id=>"#{server.alias}" %></td>
+    <td><%= link_to 'Destroy',:controller=>"servers", :action=>"destroy", :id=>"#{server.alias}", :confirm => 'Are you sure?', :method=>:delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New server', new_server_path %>

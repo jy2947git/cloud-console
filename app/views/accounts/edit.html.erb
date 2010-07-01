@@ -1,0 +1,37 @@
+<h1>Editing account</h1>
+
+<% form_for(@account) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :full_name %><br />
+    <%= f.text_field :full_name %>
+  </p>
+  <p>
+    <%= f.label :admin_name %><br />
+    <%= f.text_field :admin_name %>
+  </p>
+  <p>
+    <%= f.label :admin_phone %><br />
+    <%= f.text_field :admin_phone %>
+  </p>
+  <p>
+    <%= f.label :admin_email %><br />
+    <%= f.text_field :admin_email %>
+  </p>
+  <p>
+    <%= f.label :server_id, "hosted on" %>
+    <!-- select("post", "person_id", Person.find(:all).collect {|p| [ p.name, p.id ] }, { :include_blank => true }) -->
+    <%= f.select(:server_id, Server.find(:all).collect {|p| [ p.alias, p.id ] }, { :include_blank => true }) %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @account %> |
+<%= link_to 'Back', accounts_path %>

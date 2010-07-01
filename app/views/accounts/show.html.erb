@@ -1,0 +1,32 @@
+<p>
+  <b>Name:</b>
+  <%=h @account.name %>
+</p>
+
+<p>
+  <b>Full name:</b>
+  <%=h @account.full_name %>
+</p>
+
+<p>
+  <b>Admin name:</b>
+  <%=h @account.admin_name %>
+</p>
+
+<p>
+  <b>Admin phone:</b>
+  <%=h @account.admin_phone %>
+</p>
+
+<p>
+  <b>Admin email:</b>
+  <%=h @account.admin_email %>
+</p>
+
+<p>
+  <b>hosted on:</b>
+  <%= h @account.server.alias if @account.server %>
+</p>
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

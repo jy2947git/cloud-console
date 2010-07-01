@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  alias: MyString
+  public_name: MyString
+  private_name: MyString
+  public_ip: MyString
+  private_ip: MyString
+  type: MyString
+  status: MyString
+  image: MyString
+
+two:
+  alias: MyString
+  public_name: MyString
+  private_name: MyString
+  public_ip: MyString
+  private_ip: MyString
+  type: MyString
+  status: MyString
+  image: MyString

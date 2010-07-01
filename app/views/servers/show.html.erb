@@ -1,0 +1,44 @@
+<p>
+  <b>Alias:</b>
+  <%=h @server.alias %>
+</p>
+
+<p>
+  <b>Public name:</b>
+  <%=h @server.public_name %>
+</p>
+
+<p>
+  <b>Private name:</b>
+  <%=h @server.private_name %>
+</p>
+
+<p>
+  <b>Public ip:</b>
+  <%=h @server.public_ip %>
+</p>
+
+<p>
+  <b>Private ip:</b>
+  <%=h @server.private_ip %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @server.type %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @server.status %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%=h @server.image %>
+</p>
+
+
+<td><%= link_to 'Edit', :controller=>"servers", :action=>"edit", :id=>"#{@server.alias}" %></td>
+ |
+<%= link_to 'Back', servers_path %>
