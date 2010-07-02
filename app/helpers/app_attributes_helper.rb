@@ -1,0 +1,2 @@
+module AppAttributesHelper
+end
