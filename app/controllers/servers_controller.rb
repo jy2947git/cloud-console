@@ -26,7 +26,6 @@ class ServersController < ApplicationController
   # GET /servers/new.xml
   def new
     @server = Server.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @server }
@@ -43,7 +42,7 @@ class ServersController < ApplicationController
   # POST /servers.xml
   def create
     @server = Server.new(params[:server])
-
+    @server.create_instance
     respond_to do |format|
       if @server.save
         flash[:notice] = 'Server was successfully created.'

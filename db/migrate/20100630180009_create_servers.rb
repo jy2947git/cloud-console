@@ -1,14 +1,15 @@
 class CreateServers < ActiveRecord::Migration
   def self.up
     create_table :servers do |t|
-      t.string :alias
-      t.string :public_name
-      t.string :private_name
-      t.string :public_ip
-      t.string :private_ip
-      t.string :type
-      t.string :status
-      t.string :image
+      t.string :alias, :null => false
+      t.string :system_name, :null=>true
+      t.string :public_name, :null => true
+      t.string :private_name, :null => true
+      t.string :public_ip, :null => true
+      t.string :private_ip, :null => true
+      t.string :type, :null => true
+      t.string :status, :null => true
+      t.string :image, :null => true
 
       t.timestamps
     end
